@@ -1,6 +1,6 @@
 <h1>To Do App</h1>
-
+<pre>{{vm}}</pre>
 <ul>
-    <li>To do 1</li>
-    <li>To do 2</li>
+    <li ng-class="{strike: todo.done}" ng-repeat="todo in vm.todos">{{todo.name}}</li>
+    <li><input type="text" ng-model="vm.newToDo"><button ng-click="vm.createNewToDo(vm.newToDo)">+</button></li>
 </ul>
